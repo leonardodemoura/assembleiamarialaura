@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSEMBLEIA DIGITAL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="slides-container">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0001.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0002.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0003.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0004.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0005.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0006.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0007.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0008.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0009.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0010.jpg" alt="" width="100%" height="600rem">
+        <img class="img_slide1" src="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA_page-0011.jpg" alt="" width="100%" height="600rem">
+        <a class="baixar_pdf" href="slides/APRESENTAÇÃO ASSEMBLEIA GERAL ORDINÁRIA 14 08 2024 MARIA LAURA.PDF">BAIXAR PDF</a>
+    
+        <button id="botao_enviarduvida" class="floating-button">Enviar Dúvida</button>
+
+    <div id="modalFormulario" class="modal hidden">
+        <div class="modal-content" id="doubt-form-container">
+            <span class="close">&times;</span>
+            <form id="formDuvida" action="https://formsubmit.co/leonardodemourasouza12@gmail.com" method="POST">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="unidade">Unidade:</label><br>
+                <input type="text" id="unidade" name="unidade" required><br><br>
+                <label for="pauta">Pauta:</label><br>
+                <select id="pauta" name="pauta" required>
+                    <option value="prestacao de contas">Prestação de Contas</option>
+                    <option value="eleicao de sindico">Eleição de Síndico</option>
+                    <option value="assuntos gerais">Assuntos Gerais</option>
+                </select><br><br>
+                <label for="duvida">Dúvida:</label><br>
+                <textarea id="duvida" name="duvida" required></textarea><br><br>
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="button" id="botao_cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Obtenha os elementos do DOM
+        var modal = document.getElementById("modalFormulario");
+        var btn = document.getElementById("botao_enviarduvida");
+        var span = document.getElementsByClassName("close")[0];
+        var cancelBtn = document.getElementById("botao_cancelar");
+
+        // Quando o usuário clicar no botão, abra o modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Quando o usuário clicar no <span> (x), feche o modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quando o usuário clicar no botão cancelar, feche o modal
+        cancelBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quando o usuário clicar fora do modal, feche-o
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
+
